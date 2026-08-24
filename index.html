@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK — Premium Fashion & Lifestyle Store</title>
+    <meta name="description" content="VK (Vishva Store) — Discover premium oversized t-shirts, headphones, watches, bags, sneakers and more. Curated high-end fashion and lifestyle products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcement-bar">
+        <p>Free Shipping on Orders Over ₹1,999 — <a href="shop.html">Shop Now</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="main-header">
+        <nav class="nav container">
+            <button class="nav__menu-btn" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="nav__logo">VK</a>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li class="nav__dropdown">
+                    <a href="#">Categories <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+                    <div class="nav__dropdown-menu">
+                        <a href="shop.html#clothing">Clothing</a>
+                        <a href="shop.html#accessories">Accessories</a>
+                        <a href="shop.html#footwear">Footwear</a>
+                        <a href="shop.html#electronics">Electronics</a>
+                    </div>
+                </li>
+                <li><a href="product.html">Featured</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="nav__action-btn" id="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="nav__action-btn" id="wishlist-btn" aria-label="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+                <button class="nav__action-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-overlay__inner">
+            <input type="text" placeholder="Search for products..." id="search-input" class="search-overlay__input">
+            <button class="search-overlay__close" id="search-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__inner">
+            <button class="mobile-menu__close" id="mobile-close">&times;</button>
+            <ul class="mobile-menu__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="shop.html#clothing">Clothing</a></li>
+                <li><a href="shop.html#accessories">Accessories</a></li>
+                <li><a href="shop.html#footwear">Footwear</a></li>
+                <li><a href="shop.html#electronics">Electronics</a></li>
+                <li><a href="product.html">Featured</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ANIMATED HERO BANNER SLIDER -->
+    <section class="hero-slider" id="hero-slider">
+        <div class="hero-slides">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" id="slide-1">
+                <div class="hero-slide__bg" style="background-image: linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(26,26,26,0.6) 100%), url('images/black-tshirt.png');"></div>
+                <div class="hero-slide__content container">
+                    <span class="hero-slide__tag">New Collection 2026</span>
+                    <h1 class="hero-slide__title">Elevate Your <br><em>Everyday Style</em></h1>
+                    <p class="hero-slide__subtitle">Curated premium fashion & 240 GSM oversized tees, crafted for the modern individual.</p>
+                    <div class="hero-slide__cta">
+                        <a href="shop.html?filter=tshirts" class="btn btn--primary">Shop T-Shirts</a>
+                        <a href="product.html" class="btn btn--outline">View Bestseller</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide" id="slide-2">
+                <div class="hero-slide__bg" style="background-image: linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(26,26,26,0.6) 100%), url('images/watch.png');"></div>
+                <div class="hero-slide__content container">
+                    <span class="hero-slide__tag" style="color: #C8A96E; border-color: rgba(200,169,110,0.5);">Luxury Timepieces & Bags</span>
+                    <h1 class="hero-slide__title">Timeless Precision <br><em>& Leather Craft</em></h1>
+                    <p class="hero-slide__subtitle">Handcrafted tan leather messenger bags and chronograph watches built to endure.</p>
+                    <div class="hero-slide__cta">
+                        <a href="shop.html?filter=watches" class="btn btn--primary" style="background: #C8A96E; border-color: #C8A96E;">Explore Watches</a>
+                        <a href="shop.html?filter=bags" class="btn btn--outline">View Bags</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" id="slide-3">
+                <div class="hero-slide__bg" style="background-image: linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(26,26,26,0.6) 100%), url('images/sneakers.png');"></div>
+                <div class="hero-slide__content container">
+                    <span class="hero-slide__tag" style="color: #C75050; border-color: rgba(199,80,80,0.5);">Limited Drop — Up to 30% OFF</span>
+                    <h1 class="hero-slide__title">Urban Footwear <br><em>& Streetwear</em></h1>
+                    <p class="hero-slide__subtitle">Urban Stride leather sneakers and handcrafted Chelsea boots for effortless steps.</p>
+                    <div class="hero-slide__cta">
+                        <a href="shop.html?filter=shoes" class="btn btn--primary">Shop Footwear</a>
+                        <a href="shop.html" class="btn btn--outline">View Sale</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide" id="slide-4">
+                <div class="hero-slide__bg" style="background-image: linear-gradient(135deg, rgba(13,13,13,0.85) 0%, rgba(26,26,26,0.6) 100%), url('images/gray-tshirt.png');"></div>
+                <div class="hero-slide__content container">
+                    <span class="hero-slide__tag">Executive Collection</span>
+                    <h1 class="hero-slide__title">Italian Linen <br><em>& Oxford Shirts</em></h1>
+                    <p class="hero-slide__subtitle">Breathable linen button-downs and formal satin silk shirts designed for distinction.</p>
+                    <div class="hero-slide__cta">
+                        <a href="shop.html?filter=shirts" class="btn btn--primary">Shop Shirts</a>
+                        <a href="shop.html" class="btn btn--outline">All 25 Items</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="hero-slider__btn hero-slider__btn--prev" id="slider-prev" aria-label="Previous Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero-slider__btn hero-slider__btn--next" id="slider-next" aria-label="Next Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <!-- Slider Indicators & Progress Line -->
+        <div class="hero-slider__indicators" id="slider-indicators">
+            <div class="hero-indicator active" data-slide="0">
+                <span>01</span>
+                <div class="hero-indicator__bar"><div class="hero-indicator__progress"></div></div>
+            </div>
+            <div class="hero-indicator" data-slide="1">
+                <span>02</span>
+                <div class="hero-indicator__bar"><div class="hero-indicator__progress"></div></div>
+            </div>
+            <div class="hero-indicator" data-slide="2">
+                <span>03</span>
+                <div class="hero-indicator__bar"><div class="hero-indicator__progress"></div></div>
+            </div>
+            <div class="hero-indicator" data-slide="3">
+                <span>04</span>
+                <div class="hero-indicator__bar"><div class="hero-indicator__progress"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Bar -->
+    <section class="brand-bar">
+        <div class="container">
+            <div class="brand-bar__inner">
+                <span>Premium Quality</span>
+                <span class="brand-bar__dot"></span>
+                <span>Free Returns</span>
+                <span class="brand-bar__dot"></span>
+                <span>Secure Checkout</span>
+                <span class="brand-bar__dot"></span>
+                <span>Fast Delivery</span>
+                <span class="brand-bar__dot"></span>
+                <span>24/7 Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories section" id="categories">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Explore Collections</span>
+                <h2 class="section__title">Shop by Category</h2>
+                <p class="section__desc">Curated Fashion & Lifestyle Essentials</p>
+            </div>
+            <div class="categories__grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <a href="shop.html?filter=shirts" class="category-card" id="cat-shirts">
+                    <div class="category-card__img" style="background-image: url('images/shirt.svg')"></div>
+                    <div class="category-card__overlay">
+                        <h3>👔 Shirts</h3>
+                        <span>6 Different Types</span>
+                    </div>
+                </a>
+                <a href="shop.html?filter=pants" class="category-card" id="cat-pants">
+                    <div class="category-card__img" style="background-image: url('images/pants.svg')"></div>
+                    <div class="category-card__overlay">
+                        <h3>👖 Pants</h3>
+                        <span>6 Different Types</span>
+                    </div>
+                </a>
+                <a href="shop.html?filter=tshirts" class="category-card" id="cat-tshirts">
+                    <div class="category-card__img" style="background-image: url('images/black-tshirt.png')"></div>
+                    <div class="category-card__overlay">
+                        <h3>👕 T-Shirts</h3>
+                        <span>240 GSM Oversized Tees</span>
+                    </div>
+                </a>
+                <a href="shop.html?filter=bags" class="category-card" id="cat-bags">
+                    <div class="category-card__img" style="background-image: url('images/leather-bag.png')"></div>
+                    <div class="category-card__overlay">
+                        <h3>💼 Bags</h3>
+                        <span>Leather Messenger & Duffels</span>
+                    </div>
+                </a>
+                <a href="shop.html?filter=watches" class="category-card" id="cat-watches">
+                    <div class="category-card__img" style="background-image: url('images/watch.png')"></div>
+                    <div class="category-card__overlay">
+                        <h3>⌚ Watches</h3>
+                        <span>Chronographs & Leather Straps</span>
+                    </div>
+                </a>
+                <a href="shop.html?filter=shoes" class="category-card" id="cat-shoes">
+                    <div class="category-card__img" style="background-image: url('images/sneakers.png')"></div>
+                    <div class="category-card__overlay">
+                        <h3>👟 Shoes</h3>
+                        <span>Leather Sneakers & Boots</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured section" id="featured-products">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Bestsellers</span>
+                <h2 class="section__title">Featured Products</h2>
+                <p class="section__desc">Our most loved pieces, handpicked for you</p>
+            </div>
+            <div class="products-grid">
+                <article class="product-card" id="product-1">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/black-tshirt.png" alt="Premium Oversized T-Shirt - Black" class="product-card__img" loading="lazy">
+                            <span class="product-card__badge">Bestseller</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Clothing</span>
+                            <h3 class="product-card__title">Premium Oversized T-Shirt</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹1,299</span>
+                                <span class="product-card__old-price">₹1,899</span>
+                            </p>
+                            <div class="product-card__colors">
+                                <span class="color-dot color-dot--black active"></span>
+                                <span class="color-dot color-dot--gray"></span>
+                                <span class="color-dot color-dot--white"></span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="product-card" id="product-2">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/headphones.png" alt="Studio Pro Headphones" class="product-card__img" loading="lazy">
+                            <span class="product-card__badge badge--new">New</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Electronics</span>
+                            <h3 class="product-card__title">Studio Pro Headphones</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹4,999</span>
+                                <span class="product-card__old-price">₹6,499</span>
+                            </p>
+                            <div class="product-card__colors">
+                                <span class="color-dot color-dot--black active"></span>
+                                <span class="color-dot color-dot--silver"></span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="product-card" id="product-3">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/watch.png" alt="Classic Leather Watch" class="product-card__img" loading="lazy">
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Accessories</span>
+                            <h3 class="product-card__title">Classic Leather Watch</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹3,499</span>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="product-card" id="product-4">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/leather-bag.png" alt="Heritage Messenger Bag" class="product-card__img" loading="lazy">
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Bags</span>
+                            <h3 class="product-card__title">Heritage Messenger Bag</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹2,799</span>
+                                <span class="product-card__old-price">₹3,999</span>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="product-card" id="product-5">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/sneakers.png" alt="Urban Stride Sneakers" class="product-card__img" loading="lazy">
+                            <span class="product-card__badge badge--sale">-30%</span>
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Footwear</span>
+                            <h3 class="product-card__title">Urban Stride Sneakers</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹3,199</span>
+                                <span class="product-card__old-price">₹4,599</span>
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="product-card" id="product-6">
+                    <a href="product.html" class="product-card__link">
+                        <div class="product-card__img-wrap">
+                            <img src="images/gray-tshirt.png" alt="Essential Oversized Tee - Gray" class="product-card__img" loading="lazy">
+                            <div class="product-card__actions">
+                                <button class="product-card__action" aria-label="Quick view">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="product-card__action" aria-label="Add to wishlist">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <span class="product-card__category">Clothing</span>
+                            <h3 class="product-card__title">Essential Oversized Tee</h3>
+                            <p class="product-card__price">
+                                <span class="product-card__current-price">₹999</span>
+                                <span class="product-card__old-price">₹1,499</span>
+                            </p>
+                            <div class="product-card__colors">
+                                <span class="color-dot color-dot--gray active"></span>
+                                <span class="color-dot color-dot--beige"></span>
+                                <span class="color-dot color-dot--navy"></span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="section__cta">
+                <a href="shop.html" class="btn btn--primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Banner -->
+    <section class="editorial" id="editorial">
+        <div class="editorial__split">
+            <div class="editorial__image">
+                <img src="images/black-tshirt.png" alt="VK Premium Collection" loading="lazy">
+            </div>
+            <div class="editorial__content">
+                <span class="section__tag">The VK Promise</span>
+                <h2 class="editorial__title">Crafted for <br><em>Those Who Care</em></h2>
+                <p class="editorial__text">Every piece in our collection is designed with intention — premium fabrics, refined fits, and timeless aesthetics. We believe in quality over quantity, style over trends.</p>
+                <div class="editorial__features">
+                    <div class="editorial__feature">
+                        <div class="editorial__feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Premium Materials</h4>
+                            <p>240 GSM cotton, genuine leather, precision engineering</p>
+                        </div>
+                    </div>
+                    <div class="editorial__feature">
+                        <div class="editorial__feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Free Shipping & Returns</h4>
+                            <p>Hassle-free delivery across India, easy 15-day returns</p>
+                        </div>
+                    </div>
+                    <div class="editorial__feature">
+                        <div class="editorial__feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <div>
+                            <h4>Built to Last</h4>
+                            <p>Enduring quality that gets better with every wear</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="shop.html" class="btn btn--dark">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Reviews</span>
+                <h2 class="section__title">What Our Customers Say</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial-card" id="testimonial-1">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"The oversized tee is insanely comfortable. Best quality fabric I've ever felt at this price point. Ordered three more!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">RK</div>
+                        <div>
+                            <strong>Rahul K.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="testimonial-2">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"VK has become my go-to store. The leather messenger bag is stunning — looks even better in person. Fast shipping too!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">PS</div>
+                        <div>
+                            <strong>Priya S.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="testimonial-3">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"Premium quality at affordable prices. The Studio Pro headphones rival brands 3x the price. Exceptional sound and build!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">AM</div>
+                        <div>
+                            <strong>Ankit M.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter__inner">
+                <div class="newsletter__content">
+                    <h2>Join the VK Club</h2>
+                    <p>Get 10% off your first order, early access to new drops, and exclusive member-only deals.</p>
+                </div>
+                <form class="newsletter__form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required id="newsletter-email">
+                    <button type="submit" class="btn btn--primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">VK</a>
+                    <p>Curated premium fashion & lifestyle essentials for the modern individual.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Products</a></li>
+                        <li><a href="shop.html#clothing">Clothing</a></li>
+                        <li><a href="shop.html#accessories">Accessories</a></li>
+                        <li><a href="shop.html#footwear">Footwear</a></li>
+                        <li><a href="shop.html#electronics">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 VK (Vishva Store). All rights reserved.</p>
+                <div class="footer__payments">
+                    <span>💳 Visa</span>
+                    <span>💳 Mastercard</span>
+                    <span>💳 UPI</span>
+                    <span>💳 COD</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav__item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="shop.html" class="mobile-bottom-nav__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+            <span>Shop</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Wishlist</span>
+        </a>
+        <a href="checkout.html" class="mobile-bottom-nav__item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>

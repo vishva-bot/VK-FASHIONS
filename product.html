@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizer — VK Store (Fabrics, Colors & Specs)</title>
+    <meta name="description" content="Customize your Shirts, T-Shirts, Watches, and Headphones with different colors (Black, White, Navy, Olive, Rose Gold) and fabrics (Organic Cotton, Linen, Silk, Leather).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎨 Select Your Preferred Fabric & Color Variant — Custom Tailored Quality</p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="main-header">
+        <nav class="nav container">
+            <button class="nav__menu-btn" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="nav__logo">VK</a>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="product.html" class="active">Product Customizer</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="nav__action-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Customizer Section -->
+    <section class="product-detail section container">
+        
+        <!-- Category Selector Tabs -->
+        <div class="customizer-category-tabs">
+            <button type="button" class="cust-tab active" data-product="tshirt">👕 240 GSM Cotton T-Shirt</button>
+            <button type="button" class="cust-tab" data-product="shirt">👔 Premium Fabric Shirt</button>
+            <button type="button" class="cust-tab" data-product="pants">👖 Pants & Trousers</button>
+            <button type="button" class="cust-tab" data-product="watch">⌚ Luxury Watch</button>
+            <button type="button" class="cust-tab" data-product="headphone">🎧 Studio Pro Headphones</button>
+        </div>
+
+        <div class="product-detail__grid" style="margin-top: 24px;">
+            <!-- Main Gallery -->
+            <div class="product-gallery">
+                <div class="product-gallery__thumbs" id="cust-thumbs">
+                    <div class="product-gallery__thumb active"><img src="images/black-tshirt.png" alt="Front View"></div>
+                    <div class="product-gallery__thumb"><img src="images/gray-tshirt.png" alt="Alternate Color View"></div>
+                </div>
+                <div class="product-gallery__main">
+                    <img src="images/black-tshirt.png" id="main-product-img" alt="Selected Product Variant">
+                </div>
+            </div>
+
+            <!-- Product Info & Customizer Form -->
+            <div class="product-info">
+                <div class="product-info__breadcrumb">
+                    <a href="index.html">Home</a> / Customizer / <span id="cust-category-name">T-Shirts</span>
+                </div>
+                <h1 class="product-info__title" id="cust-title">VK 240 GSM Organic Cotton Oversized Tee</h1>
+                
+                <div class="product-info__rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="count">(184 Verified Reviews)</span>
+                </div>
+
+                <div class="product-info__price-wrap">
+                    <span class="product-info__price" id="cust-price">₹1,299</span>
+                    <span class="product-info__price-old" id="cust-old-price">₹1,899</span>
+                    <span class="product-info__price-save" id="cust-save">Save ₹600 (31% OFF)</span>
+                </div>
+
+                <p class="product-info__desc" id="cust-desc">
+                    Fabricated from 100% Organic Heavyweight Combed Cotton with bio-wash finish. Drop-shoulder silhouette for ultra-comfort.
+                </p>
+
+                <!-- Fabric Selection -->
+                <div class="product-options">
+                    <span class="product-options__label">Fabric Type: <strong id="selected-fabric-name">100% Organic Cotton (240 GSM)</strong></span>
+                    <div class="fabric-selector" id="fabric-options">
+                        <button type="button" class="fabric-pill active" data-fabric="Organic Cotton (240 GSM)">Organic Cotton</button>
+                        <button type="button" class="fabric-pill" data-fabric="Pima Cotton Soft Touch">Pima Soft Cotton</button>
+                        <button type="button" class="fabric-pill" data-fabric="Waffle Knit Breathable">Waffle Knit</button>
+                        <button type="button" class="fabric-pill" data-fabric="Acid Wash Vintage Cotton">Acid Wash Vintage</button>
+                    </div>
+                </div>
+
+                <!-- Color Selection Swatches -->
+                <div class="product-options">
+                    <span class="product-options__label">Selected Color: <strong id="selected-color-name">Jet Black</strong></span>
+                    <div class="color-swatches-grid" id="color-swatches">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="product-options" id="size-section">
+                    <span class="product-options__label">Select Size</span>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn active">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XXL</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="product-actions">
+                    <div class="qty-selector">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <span class="qty-value" id="qty-val">1</span>
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                    <button class="btn btn--primary add-to-cart-btn" id="cust-add-btn" data-id="cust-1" data-name="Organic Cotton Oversized Tee" data-price="1299" data-img="images/black-tshirt.png">
+                        Add Custom Variant to Bag
+                    </button>
+                    <a href="checkout.html" class="btn btn--dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 VK (Vishva Store). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

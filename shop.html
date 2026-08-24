@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Collection — Shirts, Pants, T-Shirts, Bags & Watches | VK Store</title>
+    <meta name="description" content="Explore different types of Shirts (Linen, Oxford, Flannel, Silk, Denim), Pants (Chinos, Cargos, Formal Trousers, Jeans, Linen Pants), T-Shirts, Bags, Watches & Shoes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>👖 New Arrival: Full Range of Chinos, Cargos, Linen Pants & Luxury Shirts Now Available!</p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="main-header">
+        <nav class="nav container">
+            <button class="nav__menu-btn" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="nav__logo">VK</a>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop All</a></li>
+                <li class="nav__dropdown">
+                    <a href="#">Categories <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+                    <div class="nav__dropdown-menu">
+                        <a href="shop.html?filter=shirts">Shirts (Types)</a>
+                        <a href="shop.html?filter=pants">Pants / Trousers</a>
+                        <a href="shop.html?filter=tshirts">T-Shirts</a>
+                        <a href="shop.html?filter=bags">Bags & Wallets</a>
+                        <a href="shop.html?filter=watches">Watches</a>
+                        <a href="shop.html?filter=shoes">Shoes & Boots</a>
+                    </div>
+                </li>
+                <li><a href="product.html">Customizer</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="nav__action-btn" id="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="nav__action-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero__title">VK Fashion Catalog (Shirts, Pants & Essentials)</h1>
+            <p class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Shop Collection</span></p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section container">
+        <!-- Filter Bar -->
+        <div class="shop-controls">
+            <div class="shop-filters">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="shirts">👔 Shirts (6 Types)</button>
+                <button class="filter-btn" data-filter="pants">👖 Pants (6 Types)</button>
+                <button class="filter-btn" data-filter="tshirts">👕 T-Shirts</button>
+                <button class="filter-btn" data-filter="bags">💼 Bags</button>
+                <button class="filter-btn" data-filter="watches">⌚ Watches</button>
+                <button class="filter-btn" data-filter="shoes">👟 Shoes</button>
+            </div>
+            <div class="shop-sort">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div class="products-grid products-grid--shop" id="catalog-products-grid">
+            
+            <!-- CATEGORY 1: TYPES OF SHIRTS -->
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Reg Linen Shirt.jpg" alt="Pure Italian Linen Casual Shirt" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Linen</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #1</span>
+                        <h3 class="product-card__title">Pure Italian Linen Casual Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,199</span>
+                            <span class="product-card__old-price">₹2,799</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Light Blue Slim Fit Oxford Long Sleeve Shirt.jpg" alt="Formal Oxford Cotton Dress Shirt" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Oxford Cotton</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #2</span>
+                        <h3 class="product-card__title">Formal Oxford Cotton Dress Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,899</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Cotton Flannel.jpg" alt="Oversized Plaid Heavyweight Flannel Shirt" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge badge--new">Flannel</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #3</span>
+                        <h3 class="product-card__title">Oversized Plaid Heavyweight Flannel Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,999</span>
+                            <span class="product-card__old-price">₹2,599</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Men’s Satin Deep V-Neck Wrap Shirt _ Long Sleeve Luxury Party Shirt for Night Out & Clubwear.jpg" alt="Luxury Satin Silk Evening Shirt" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge badge--sale">Silk Satin</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #4</span>
+                        <h3 class="product-card__title">Luxury Satin Silk Evening Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,499</span>
+                            <span class="product-card__old-price">₹3,299</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/black-tshirt.png" alt="Vintage Washed Indigo Denim Shirt" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Denim</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #5</span>
+                        <h3 class="product-card__title">Vintage Washed Indigo Denim Utility Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,799</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="shirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/headphones.png" alt="Mandarin Bandhgala Collar Cotton Shirt" class="product-card__img" loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shirt Type #6</span>
+                        <h3 class="product-card__title">Mandarin Bandhgala Collar Cotton Shirt</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,699</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <!-- CATEGORY 2: TYPES OF PANTS & TROUSERS -->
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/gray-tshirt.png" alt="Stretch Cotton Slim Fit Chino Pants" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Bestseller</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #1</span>
+                        <h3 class="product-card__title">Stretch Cotton Slim Fit Chino Pants</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,999</span>
+                            <span class="product-card__old-price">₹2,699</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Men’s Satin Deep V-Neck Wrap Shirt _ Long Sleeve Luxury Party Shirt for Night Out & Clubwear.jpg" alt="Multi-Pocket Tactical Utility Cargo Trousers" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge badge--new">Cargo</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #2</span>
+                        <h3 class="product-card__title">Multi-Pocket Tactical Utility Cargo Trousers</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,299</span>
+                            <span class="product-card__old-price">₹2,999</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Light Blue Slim Fit Oxford Long Sleeve Shirt.jpg" alt="Italian Wool Pleated Formal Dress Trousers" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Formal</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #3</span>
+                        <h3 class="product-card__title">Italian Wool Pleated Formal Dress Trousers</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,499</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/Light Blue Slim Fit Oxford Long Sleeve Shirt.jpg" alt="Vintage Blue Wash Relaxed Straight Jeans" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge badge--sale">Denim</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #4</span>
+                        <h3 class="product-card__title">Vintage Blue Wash Relaxed Straight Jeans</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,199</span>
+                            <span class="product-card__old-price">₹2,899</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/pants.svg" alt="Breathable Pure Linen Drawstring Trousers" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Linen</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #5</span>
+                        <h3 class="product-card__title">Breathable Pure Linen Drawstring Trousers</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,899</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card" data-category="pants">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/pants.svg" alt="Heavy Fleece Athletic Jogger Sweatpants" class="product-card__img" loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Pants Type #6</span>
+                        <h3 class="product-card__title">Heavy Fleece Athletic Cuffed Joggers</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,599</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <!-- CATEGORY 3: T-SHIRTS -->
+            <article class="product-card" data-category="tshirts">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/black-tshirt.png" alt="VK Signature Oversized Black Tee" class="product-card__img" loading="lazy">
+                        <span class="product-card__badge">Bestseller</span>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">T-Shirt</span>
+                        <h3 class="product-card__title">VK 240 GSM Organic Cotton Oversized Tee</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹1,299</span>
+                            <span class="product-card__old-price">₹1,899</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <!-- CATEGORY 4: BAGS -->
+            <article class="product-card" data-category="bags">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/leather-bag.png" alt="Heritage Tan Leather Messenger Bag" class="product-card__img" loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Bag</span>
+                        <h3 class="product-card__title">Heritage Tan Leather Messenger Bag</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹2,799</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <!-- CATEGORY 5: WATCHES -->
+            <article class="product-card" data-category="watches">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/watch.png" alt="Classic Leather & Steel Watch" class="product-card__img" loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Watch</span>
+                        <h3 class="product-card__title">Chronograph Stainless Steel Watch</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹3,499</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <!-- CATEGORY 6: SHOES -->
+            <article class="product-card" data-category="shoes">
+                <a href="product.html" class="product-card__link">
+                    <div class="product-card__img-wrap">
+                        <img src="images/sneakers.png" alt="Urban Stride Leather Sneakers" class="product-card__img" loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Shoe</span>
+                        <h3 class="product-card__title">Urban Stride Leather Sneakers</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__current-price">₹3,199</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 VK (Vishva Store). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
